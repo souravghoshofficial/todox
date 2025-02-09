@@ -5,17 +5,17 @@ import saveIcon from "../assets/save.svg";
 import { useTodo } from "../contexts";
 
 const Todo = ({ todo }) => {
-  const [isTodoEditable, setIsTodoEditable] = useState(false)
-  const [todoMsg, setTodoMsg] = useState(todo.todo)
-  const {updateTodo, deleteTodo, toggleComplete} = useTodo()
+  const [isTodoEditable, setIsTodoEditable] = useState(false);
+  const [todoMsg, setTodoMsg] = useState(todo.todo);
+  const { updateTodo, deleteTodo, toggleComplete } = useTodo();
 
   const editTodo = () => {
-    updateTodo(todo.id, {...todo, todo: todoMsg})
-    setIsTodoEditable(false)
-  }
+    updateTodo(todo.id, { ...todo, todo: todoMsg });
+    setIsTodoEditable(false);
+  };
   const taskComplete = () => {
-    toggleComplete(todo.id)
-  }
+    toggleComplete(todo.id);
+  };
 
   return (
     <div
@@ -30,7 +30,9 @@ const Todo = ({ todo }) => {
           type="checkbox"
           checked={todo.completed}
           onChange={taskComplete}
-          className={`${isTodoEditable? "hidden" : "block"} cursor-pointer w-4 h-4 accent-green-600`}
+          className={`${
+            isTodoEditable ? "hidden" : "block"
+          } cursor-pointer w-4 h-4 accent-green-600`}
         />
         <input
           type="text"
@@ -62,7 +64,10 @@ const Todo = ({ todo }) => {
             className="w-7 md:w-5"
           />
         </button>
-        <button onClick={() => deleteTodo(todo.id)} className="p-2 bg-white rounded cursor-pointer">
+        <button
+          onClick={() => deleteTodo(todo.id)}
+          className="p-2 bg-white rounded cursor-pointer"
+        >
           <img src={deleteIcon} alt="delete icon" className="w-7 md:w-5" />
         </button>
       </div>

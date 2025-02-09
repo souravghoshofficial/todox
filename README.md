@@ -22,6 +22,10 @@ TodoX is a sleek and minimalistic Todo List application built with ***React*, *T
 
 ![screenshot](./public/screenshot.png)
 
+## ↗️View Live
+
+This app is live at: [todox-sourav.vercel.app](https://todox-sourav.vercel.app)
+
 ## 🏗 Installation  
 
 1. Clone the repository:  
@@ -32,4 +36,9 @@ TodoX is a sleek and minimalistic Todo List application built with ***React*, *T
     npm install
 3. ```sh
     npm run dev    
-    
+
+## 📬 Contributing
+  Feel free to fork this project, submit issues, and make pull requests. Any feedback is highly appreciated!
+ 
+
+ 🔗 Connect with me:  [LinkedIn](https://www.linkedin.com/in/souravghosh121)
