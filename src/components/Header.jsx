@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sunIcon from "../assets/sun.svg";
 import moonIcon from "../assets/moon.svg";
 import { useState } from "react";
@@ -6,6 +6,13 @@ import {useTheme} from "../contexts";
 
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(false)
+  useEffect(() => {
+    const theme = localStorage.getItem("theme")
+    if(theme === "dark"){
+      setDarkTheme(true)
+    }
+  }, [])
+  
   const {toggleTheme} = useTheme()
   const changeTheme = () => {
     toggleTheme()
